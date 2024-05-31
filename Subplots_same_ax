@@ -1,0 +1,10 @@
+col=['Age','Fare']
+
+# make a list of all dataframes 
+#fig, axes = plt.subplots(nrow, ncol,figsize=(8, 2))
+plt.figure(figsize=(8, 2))
+for n, i in enumerate(col):
+    ax = plt.subplot(1,2, n + 1)
+    df[i].plot(kind="hist",ax=ax)
+    plt.xlabel(i)
+    
